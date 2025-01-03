@@ -49,6 +49,7 @@
 
 .title {
   color: #000000;
+  font-family: Helvetica, sans-serif;
 }
 
 .description {
@@ -78,21 +79,7 @@
   /* font-size: 20px; */
   color: #000000;
   animation: pulse 4s ease-in-out;
-}
-
-:global(.inhale-animation) {
-  animation: expand 4s linear;
-  transform: scale(1);
-}
-
-:global(.hold-animation) {
-  transform: scale(1);
-  transition: transform 0.1s linear;
-}
-
-:global(.exhale-animation) {
-  animation: shrink 8s linear;
-  transform: scale(0.5);
+  font-family: Helvetica, sans-serif;
 }
 
 @keyframes expand {
@@ -111,6 +98,20 @@
   to {
     transform: scale(0.5);
   }
+}
+.inhaleAnimation {
+animation: expand 4s linear;
+transform: scale(1);
+}
+
+.holdAnimation {
+transform: scale(1);
+transition: transform 0.1s linear;
+}
+
+.exhaleAnimation {
+animation: shrink 8s linear;
+transform: scale(0.5);
 }
 
 .button {

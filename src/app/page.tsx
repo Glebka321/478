@@ -51,7 +51,16 @@ const BreathingExercise: React.FC = () => {
 
   const getAnimationClass = (): string => {
     if (!isActive) return "";
-    return `${phase}-animation`;
+    switch (phase) {
+      case "inhale":
+        return styles.inhaleAnimation;
+      case "hold":
+        return styles.holdAnimation;
+      case "exhale":
+        return styles.exhaleAnimation;
+      default:
+        return "";
+    }
   };
 
   return (
